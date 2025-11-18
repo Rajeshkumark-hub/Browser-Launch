@@ -10,14 +10,17 @@ public class Selenium {
 	
 	static WebDriverManager driver;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
-		ChromeOptions A = new ChromeOptions();
-		WebDriver driver = new ChromeDriver(A);
+		//ChromeOptions A = new ChromeOptions();
+		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.38.0");
 		driver.manage().window().fullscreen();
-		//driver.close();
+		Thread.sleep(4000);
+		String title = driver.getTitle();
+		System.out.println(title);
+		driver.quit();
 	}
 	
 }
