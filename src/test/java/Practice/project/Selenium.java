@@ -20,7 +20,10 @@ public class Selenium {
 		Thread.sleep(4000);
 		String title = driver.getTitle();
 		System.out.println(title);
+		Thread.sleep(3000);
+		driver.navigate().to("https://www.amazon.in/");
+		driver.manage().window().fullscreen();
 		driver.quit();
+		
 	}
-	
 }
