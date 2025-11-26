@@ -2,6 +2,7 @@ package Practice.project;
 
 import java.time.Duration;
 
+import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,6 +26,8 @@ public class Selenium {
 		//Thread.sleep(3000);
 		driver.navigate().to("https://www.amazon.in/");
 		driver.manage().window().fullscreen();
+		String title1 = driver.getTitle();
+		System.out.println(title1);
 		driver.quit();
 		
 	}
